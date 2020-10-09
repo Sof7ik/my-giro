@@ -32,6 +32,24 @@ ul {
     list-style-type: none;
 }
 
+h2, h3
+{
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+h3
+{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 div.container
 {
     width: 90%;
@@ -40,9 +58,7 @@ div.container
     margin: 0 auto;
 }
 
-section.advantages, 
-section.about-giros, 
-section.goods
+section.new-section
 {
     padding: 50px 0;
 }
@@ -270,11 +286,61 @@ div.info-column article
     margin-top: 20px;
 }
 
+section.goods
+{
+    background-image: linear-gradient(to right bottom,
+                                    rgb(44, 44, 44) 0% 10%,  
+                                    rgb(201, 173, 18) 10% 15%, 
+                                    rgb(44, 44, 44) 15% 80%,
+                                    rgb(117, 211, 41) 80% 85%,
+                                    rgb(44, 44, 44) 85% 100%);
+}
+
+section.goods h2
+{
+    color: #fff;
+}
+
+div.goods-filter
+{
+    background-color: rgb(85, 85, 85);
+    border-radius: 30px;
+
+    width: max-content;
+
+    padding: 10px 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.goods-filter a
+{
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+
+    display: block;
+    min-width: 100px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+div.goods-filter a:last-child
+{
+    margin-right: unset;
+}
+
 div.goods-wrapper
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
 }
 
 div.part
@@ -284,12 +350,187 @@ div.part
     justify-content: flex-start;
     align-items: center;
 
-    background-color: #ccc;
+    background-color: rgb(29, 29, 29);
+    /* box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.473); */
+    transition: all .5s;
 
     padding: 15px;
+}
+
+div.part:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.473);
+    transform: scale(1.05);
 }
 
 div.part img
 {
     width: 200px;
+    margin-bottom: 15px;
+}
+
+div.part span.part-name,
+div.part span.part-price
+{
+    color: #fff;
+    font-size: 16px;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+div.part span.part-type
+{
+    margin-top: 7px;
+    color: #fff;
+    font-style: italic;
+    font-size: 13px;
+
+    font-family: "Rubik", sans-serif; 
+}
+
+div.team-wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+
+div.team-member
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.team-member img
+{
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+div.team-member p, div.team-member span
+{
+    color: rgb(119, 119, 119);
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+div.brands-wrapper
+{
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    height: 120px;
+    position: relative;
+
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; */
+}
+
+div.brand
+{
+    position: relative;
+    width: 200px;
+    height: 100px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    display: inline-block;
+}
+
+img.useful-image
+{
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+div.form
+{
+    max-width: 800px;
+}
+
+form.form-feedback
+{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+form.form-feedback label, form.form-feedback span
+{
+    display: inline;
+}
+
+form.form-feedback span
+{
+    color: red;
+    font-size: 15px;
+}
+
+form.form-feedback input
+{
+    padding: 5px 0;
+
+    margin-bottom: 20px;
+}
+
+form.form-feedback input:last-child
+{
+    margin-bottom: unset;
+}
+
+form.form-feedback input[type="text"]
+{
+    width: 350px;
+}
+
+form.form-feedback input[type="email"]
+{
+    width: 400px;
+}
+
+form.form-feedback input[type="text"],
+form.form-feedback input[type="email"]
+{
+    text-indent: 10px;
+    font-size: 15px;
+}
+
+form.form-feedback input[type="submit"]
+{
+    width: 120px;
+    margin-top: 15px;
+    text-transform: capitalize;
+    background-color: rgb(8, 201, 8);
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 0.3rem;
+    padding: 10 px 0;
+}
+
+a.toTheStart
+{
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+
+    background-color: #ccc;
+
+    border-radius: 2rem;
+
+    padding: 10px;
+
+    transform: rotate(-90deg);
+    font-size: 30px;
+    color: #000;
 }
