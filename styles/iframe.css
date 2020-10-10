@@ -1,0 +1,215 @@
+/* FONTS */
+
+    /* Oswald 400, 700*/
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+    /* Rubik 400, 600*/
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+    /* Fira Sans 400, 500*/
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap');
+
+/* FONTS */
+
+html, body
+{
+    height: max-content;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button
+{
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h2, h3
+{
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+h3
+{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+div.container
+{
+    width: 90%;
+    max-width: 1920px;
+
+    margin: 0 auto;
+}
+
+div.goods-filter
+{
+    background-color: rgb(85, 85, 85);
+    border-radius: 30px;
+
+    width: max-content;
+
+    padding: 10px 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.goods-filter a
+{
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+
+    display: block;
+    min-width: 100px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+div.goods-filter a:last-child
+{
+    margin-right: unset;
+}
+
+div.goods-filter a.active
+{
+    color: #fff;
+    background-color: #000;
+}
+
+div.goods-wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+div.part
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: rgb(29, 29, 29);
+    /* box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.473); */
+    transition: all .5s;
+
+    padding: 15px;
+}
+
+div.part:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.473);
+    transform: scale(1.05);
+}
+
+div.part img
+{
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+div.part span.part-name,
+div.part span.part-price
+{
+    color: #fff;
+    font-size: 16px;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+div.part span.part-type
+{
+    margin-top: 7px;
+    color: #fff;
+    font-style: italic;
+    font-size: 13px;
+
+    font-family: "Rubik", sans-serif; 
+}
+
+@media all and (max-width: 1366px)
+{
+    div.goods-wrapper
+    {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 1085px)
+{
+    div.goods-wrapper
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 850px)
+{
+    div.goods-wrapper
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 645px)
+{
+    div.goods-filter
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+
+        width: 100%;
+    }
+
+    div.goods-filter a.filter-item
+    {
+        margin-right: unset;
+    }
+}
+
+@media all and (max-width: 538px)
+{
+    div.goods-wrapper
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 421px)
+{
+    div.goods-filter
+    {
+        grid-template-columns: 1fr;
+    }
+}
